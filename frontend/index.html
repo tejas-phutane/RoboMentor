@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RoboMentor</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <nav class="navbar">
+    <h1>RoboMentor</h1>
+    <ul>
+      <li><a href="#" onclick="showScreen('dashboard')">Dashboard</a></li>
+      <li><a href="#" onclick="showScreen('chat')">Chat</a></li>
+      <li><a href="#" onclick="showScreen('learning-planner')">Learning Planner</a></li>
+      <li><a href="#" onclick="showScreen('settings')">Settings</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div id="dashboard" class="screen active">
+      <h2>Dashboard</h2>
+      <div class="dashboard-content">
+        <div class="stats">
+          <div class="stat-card">
+            <h3>Current Skills</h3>
+            <p id="skills-count">Loading...</p>
+          </div>
+          <div class="stat-card">
+            <h3>Active Goals</h3>
+            <p id="goals-count">Loading...</p>
+          </div>
+          <div class="stat-card">
+            <h3>Learning Paths</h3>
+            <p id="paths-count">Loading...</p>
+          </div>
+        </div>
+        <div class="recent-activity">
+          <h3>Recent Activity</h3>
+          <ul id="activity-list">
+            <li>Loading...</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="chat" class="screen">
+      <h2>AI Chat Interface</h2>
+      <div class="chat-container">
+        <div id="chat-messages" class="chat-messages">
+          <div class="message bot">Hello! I'm your AI mentor. How can I help you today?</div>
+        </div>
+        <div class="chat-input">
+          <input type="text" id="message-input" placeholder="Type your message...">
+          <button onclick="sendMessage()">Send</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="learning-planner" class="screen">
+      <h2>Learning Planner</h2>
+      <div class="planner-content">
+        <div class="goals-section">
+          <h3>Your Learning Goals</h3>
+          <ul id="goals-list">
+            <li>Learn Python basics</li>
+            <li>Master data structures</li>
+            <li>Build a web application</li>
+          </ul>
+        </div>
+        <div class="schedule-section">
+          <h3>Weekly Schedule</h3>
+          <div id="schedule-calendar">
+            <p>Calendar integration coming soon...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="settings" class="screen">
+      <h2>Settings</h2>
+      <div class="settings-content">
+        <form>
+          <div class="setting-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" value="User">
+          </div>
+          <div class="setting-group">
+            <label for="theme">Theme:</label>
+            <select id="theme">
+              <option value="light">Light</option>
+              <option value="dark">Dark</option>
+            </select>
+          </div>
+          <div class="setting-group">
+            <label for="notifications">Enable Notifications:</label>
+            <input type="checkbox" id="notifications" checked>
+          </div>
+          <button type="submit">Save Settings</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

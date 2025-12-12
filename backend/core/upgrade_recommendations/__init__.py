@@ -1,0 +1,1 @@
+# Upgrade recommendations module for analyzing skill gaps and generating upgrade suggestions

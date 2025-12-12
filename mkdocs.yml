@@ -1,0 +1,26 @@
+site_name: RoboMentor App Documentation
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+
+plugins:
+  - search
+  - mkdocstrings
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - Competitive Analysis: competitive-analysis.md
+  - Launch Strategy: launch-strategy.md
+  - Architecture: architecture.md
+  - API Reference: api-reference.md
+  - Development: development.md

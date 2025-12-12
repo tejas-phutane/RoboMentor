@@ -1,0 +1,1 @@
+# Trend integrations module for fetching real-time robotics trends
