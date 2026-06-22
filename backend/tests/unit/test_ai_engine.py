@@ -23,7 +23,7 @@ class TestGPTClient:
         """Test that missing API key raises ValueError."""
         with patch.dict('os.environ', {}, clear=True):
             with pytest.raises(ValueError, match="OpenRouter API key is required"):
-                GPTClient()
+                GPTClient(api_key=None)
 
     @patch('requests.post')
     def test_chat_completion_success(self, mock_post, mock_openai_key):
